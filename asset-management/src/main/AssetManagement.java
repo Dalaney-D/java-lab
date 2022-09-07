@@ -36,7 +36,7 @@ public class AssetManagement {
         int choice;
         do {
             menu.Login();
-            choice = TryCatch.getAnInteger("Enter your choice from 1->2: ", "Please enter your choice from 1->3", 1, 3);
+            choice = TryCatch.getAnInteger("Enter your choice from 1->3: ", "Please enter your choice from 1->3", 1, 3);
             switch (choice) {
                 case 1:
                     asset.searchAssetByName();
