@@ -1,0 +1,3 @@
+C11111, camry, BLUE, 2000, TOYOTA, common, 2021
+C22222, af, RED, 234, ADSF, common, 2021
+C33333, wer, RED, 23, SDAF, common, 2021
