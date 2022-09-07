@@ -64,7 +64,7 @@ public class EmployeeList {
     public void inputEmployee() {    
         employeeList.add(new Employee("E160001" ,"Nguyen Hong Hiep", "11/06/2000", "EM", "male", "e10adc3949ba59abbe56e057f20f883e"));
         employeeList.add(new Employee("E160240", "Tran Dinh Khanh", "15/07/2002", "EM", "male", "e10adc3949ba59abbe56e057f20f883e"));
-        employeeList.add(new Employee("E140449", "Le Buu Nhan", "10/07/2002", "EM", "male", "e10adc3949ba59abbe56e057f20f883e"));
+        employeeList.add(new Employee("E140449", "Le Buu Hoang", "10/07/2002", "EM", "male", "e10adc3949ba59abbe56e057f20f883e"));
         employeeList.add(new Employee("E160798", "Truong Le Minh", "03/12/2002", "EM", "male", "e10adc3949ba59abbe56e057f20f883e"));
         employeeList.add(new Employee("E160052", "Hoa Doan", "05/06/1990", "MA", "male", "e10adc3949ba59abbe56e057f20f883e"));
         writeFile();
@@ -86,16 +86,15 @@ public class EmployeeList {
         String id = TryCatch.getString("Input employeeID: ", "Input again employeeID.");
         String pw = getMD5(TryCatch.getString("Input password: ", "Input again password."));
         Employee e = searchEmployee(id);
-        if (e == null) {
+        if (e == null)
             return null;
-        } else {
-            if (e.getRole().equalsIgnoreCase("MA") && e.getPassword().equalsIgnoreCase(pw)) {
+        else {
+            if (e.getRole().equalsIgnoreCase("MA") && e.getPassword().equalsIgnoreCase(pw))
                 return "MA";
-            }
             
-            if (e.getRole().equalsIgnoreCase("EM") && e.getPassword().equalsIgnoreCase(pw)) {
+            if (e.getRole().equalsIgnoreCase("EM") && e.getPassword().equalsIgnoreCase(pw))
                 return "EM";
-            }
+            
             return null;
         }    
     }

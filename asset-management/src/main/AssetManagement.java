@@ -36,6 +36,7 @@ public class AssetManagement {
         int choice;
         do {
             menu.Login();
+	//check quyền truy cập
             choice = TryCatch.getAnInteger("Enter your choice from 1->3: ", "Please enter your choice from 1->3", 1, 3);
             switch (choice) {
                 case 1:
@@ -43,9 +44,8 @@ public class AssetManagement {
                     break;
                 case 2:
                     String login = employee.checkLogin();
-                    System.out.println(login);
                     if (login == null) {
-                        System.out.println("Incorrect id or password");
+                        System.out.println("Incorrect id or password.");
                     } else {
                         System.out.println("Successfully.");
                         if (login.equals("MA")) {
